@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Framework
 
+
 *** Variable ***
 
 
@@ -11,7 +12,7 @@ Still wait
 Implicit wait for click
     [Arguments]     ${locator}
     Wait Until Element Is Enabled           ${locator}
-    Scroll Element Into View                ${locator}
+#    Scroll Element Into View                ${locator}
     Capture Page Screenshot
     Click Element                           ${locator}
 
@@ -67,7 +68,7 @@ Switch new tab
     Capture Page Screenshot
 
 Switch main tab
-    Switch Window           new
+    Switch Window           main
     Capture Page Screenshot
 
 Close current tab

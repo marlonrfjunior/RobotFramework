@@ -1,12 +1,6 @@
 *** Settings ***
 Documentation           Setup and tear down for web aplication
-
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Resource                ImportPages.robot
 
 *** Keywords ***
 Open desktop session
@@ -14,3 +8,6 @@ Open desktop session
     Open Browser        about:blank         ${Browser}
     Maximize Browser Window
     Capture Page Screenshot
+
+Close
+    Close Browser
